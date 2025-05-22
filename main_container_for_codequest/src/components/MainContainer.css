@@ -1,0 +1,189 @@
+/* MainContainer.css */
+
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  color: var(--text-color);
+}
+
+/* Header Styles */
+.codequest-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+.codequest-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.codequest-logo h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logo-symbol {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--kavia-orange);
+}
+
+.codequest-tagline {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Navigation Styles */
+.section-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  padding: 12px 20px;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(232, 122, 65, 0.1);
+  border-color: var(--kavia-orange);
+}
+
+.nav-item.active {
+  background-color: var(--kavia-orange);
+  border-color: var(--kavia-orange);
+  color: white;
+}
+
+/* Content Area Styles */
+.content-area {
+  margin-bottom: 40px;
+}
+
+.content-area h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* Card Styles */
+.placeholder-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.placeholder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-color: var(--kavia-orange);
+}
+
+.placeholder-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--kavia-orange);
+}
+
+.placeholder-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.difficulty {
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--kavia-orange);
+  transition: width 0.3s ease;
+}
+
+/* Footer Styles */
+.codequest-footer {
+  text-align: center;
+  padding: 24px 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: 40px;
+}
+
+.footer-content p {
+  margin: 8px 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .section-navigation {
+    flex-direction: column;
+    gap: 8px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .codequest-logo {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .codequest-logo h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section-content {
+    grid-template-columns: 1fr;
+  }
+}
